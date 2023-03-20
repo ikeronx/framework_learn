@@ -74,7 +74,7 @@
     }
 
     /* GENERAL STYLES */
-    .getting-started__content {
+    .getting-started__content-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap:  0 60px;   
@@ -172,14 +172,15 @@
         line-height: 19px; 
         color: #5A7184;
     }
-
+    
+    /* media query for screens up to 768px wide */
     @media (max-width: 768px) {
         .getting-started__step {
             display: grid; 
             grid-template-columns:  1fr ;
         }
             
-        .getting-started__content {
+        .getting-started__content-container{
             grid-template-columns:  1fr;
             gap:  40px 0;
         }
@@ -205,7 +206,7 @@
         <article class="getting-started container">
                 <h2 class="getting-started__heading">Getting Started</h2>
                 <!-- steps & testimonial-->
-                <div class="getting-started__content ">
+                <div class="getting-started__content-container">
                     <!-- steps container -->
                     <ul class="getting-started__steps" role="list">
                         <li class="getting-started__step">

@@ -76,8 +76,9 @@
     /* GENERAL STYLES */
     .getting-started__content {
         display: grid;
-        grid-template-columns:  73% 27% ;
-        grid-row: 0;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns:  73% 27% ;
+        grid-row: 0; */
         gap: 60px;  
         /* background:  red; */
     }
@@ -96,6 +97,8 @@
         flex-direction: column;
         row-gap: 38px;
         margin-left:  70px;
+        grid-column: 1 / 3; 
+        /* grid-row: 2 / -1; */
     }
 
     .getting-started__step {
@@ -234,10 +237,7 @@
                             </div>
                             <div class="step__content">
                                 <h3 class="step__heading">Make a Payment</h3>
-                                <p class="step__description">
-                                    Add your payment method to reserve your access. Our payment gateways are secure with no automatic billing. Got
-                                    additional questions, learn more in our FAQ below.
-                            </p>
+                                <p class="step__description">Add your payment method to reserve your access. Our payment gateways are secure with no automatic billing. Got additional questions, learn more in our FAQ below.</p>
                             </div>
                         </li>
                         <li class="getting-started__step">
@@ -246,9 +246,7 @@
                             </div>
                             <div class="step__content">
                                 <h3 class="step__heading">Enjoy the Class!</h3>
-                                <p class="step__description">
-                                    Add your payment method to reserve your access. Our payment gateways are secure with no automatic billing. Got
-                                    additional questions, learn more in our FAQ below.
+                                <p class="step__description">Add your payment method to reserve your access. Our payment gateways are secure with no automatic billing. Got additional questions, learn more in our FAQ below.
                                 </p>
                             </div>
                         </li>
@@ -256,29 +254,10 @@
                     <!-- testimonial  -->
                     <aside class="getting-started__testimonial">
                         <p class="getting-started__testimonial--header-text">
-                            what our learners 
-                            are saying
+                            what our learners are saying
                         </p>
-                        <p class="getting-started__testimonial--main-text">
-                            "The lesson
-                            captured in this book 
-                            have proven to have 
-                            immediate 
-                            application for 
-                            practicing 
-                            superintendents, 
-                            aspiring 
-                            superintendents, 
-                            district leaders, and 
-                            building level 
-                            leaders."
-                        </p>
-                        <p class="getting-started__testimonial--footer-text">
-                            — Jack Hoke, 
-                            Executive Director Of The North 
-                            Carolina School 
-                            Superintendents' Association
-                        </p>
+                        <p class="getting-started__testimonial--main-text"> "The lesson captured in this book have proven to have immediate application for practicing superintendents, aspiring superintendents, district leaders, and building level leaders."</p>
+                        <p class="getting-started__testimonial--footer-text"> — Jack Hoke, Executive Director Of The North Carolina School  Superintendents' Association</p>
                     </aside>
                 </div>
         </article>

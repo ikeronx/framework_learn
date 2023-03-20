@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework Learn</title>
+    <style>
+    /* GOOGLE FONTS  */
+    @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
+
+    /* GLOBAL CSS RESET */
+    /* remove default margin and box sizing rules */
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font: inherit;
+    }
+
+    /* remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role='list'],
+    ol[role='list'] {
+        list-style: none;
+    } 
+
+    body {
+        font-family: 'Cabin', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #5A7184;
+    }
+
+    /* REUSABLE COMPONENTS */
+    .container {
+        width: min(80%, 1440px);
+        margin: 0 auto;  
+    }
+
+    .btn,
+    .btn:link, 
+    .btn:visited {
+        display: inline-block;
+        font-size: 18;
+        font-weight: 400;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration: none;
+        color:  #ffffff;
+        padding: 14px 16px;
+        border-radius: 5px;
+        width: auto;
+        cursor: pointer;
+        background-color: #EE6C4D;
+    }
+
+     /* helper class */
+    .separator--sm{
+        line-height:17px;
+        height:17px;
+    }
+
+    .separator--lg{
+        line-height:63px;
+        height:63px;
+    }
+
+    .margin-top--sm{
+        margin-top:  17px !important;
+    }
+
+    /* GENERAL STYLES */
+    .getting-started__content {
+        display: grid;
+        grid-template-columns:  65% 35% ;
+        grid-row: 0;
+        gap: 60px;  
+    }
+
+    .getting-started__heading {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 44px;
+        text-transform: uppercase;
+        color: #233D4D;
+        margin-bottom: 42px; 
+    }
+
+    .getting-started__steps {
+        display:  flex;
+        flex-direction: column;
+        row-gap: 38px;
+        margin-left:  70px;
+    }
+
+    .getting-started__step {
+        display: grid; 
+        grid-template-columns:  1fr 11fr;
+    }
+
+    .step__number {
+        justify-self: center;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 44px;
+        color: #ffffff;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: #233D4D;
+        margin-right: 20px;  
+    }
+
+    .step__number-text {
+        display:  grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .step__heading {
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 400;
+        color: #EE6C4D;
+        margin-block:  10px 10px; 
+    }
+
+    .step__description {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #5A7184;
+    } 
+
+    .getting-started__testimonial {
+        font-weight:700;
+        text-align: center;
+        padding: 18px 32px ;
+        background-color: #EAEFF0; 
+        border-radius: 5px;
+    }
+
+    .getting-started__testimonial--header-text {
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 24px;
+        color:  #5A7184;
+        margin-bottom: 11px;
+    }
+
+    .getting-started__testimonial--main-text {
+        font-size:  24px;
+        line-height:  29px;
+        color: #233D4D;
+
+        /* line */
+        border-top: 1px solid #869DB1;
+        padding-top: 10px;
+        margin-bottom:  29px;
+    }
+
+    .getting-started__testimonial--footer-text {
+        text-transform: uppercase;
+        font-size: 16px; 
+        font-weight: 700; 
+        line-height: 19px; 
+        color: #5A7184;
+    }
+
+    @media (max-width: 768px) {
+        .getting-started__step {
+            display: grid; 
+            grid-template-columns:  1fr ;
+        }
+            
+        .getting-started__content {
+            grid-template-columns:  1fr;
+        }
+
+        .getting-started__steps {
+            margin-left: 0; 
+        }
+
+        .step__content {
+            text-align: center;
+        }
+
+        .step__heading{
+            margin-block:  20px 10px; 
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <!-- GETTING STARTED SECTION -->
+    <div class="separator--sm">&nbsp;</div>
+    <section>
+        <article class="getting-started container">
+                <h2 class="getting-started__heading">Getting Started</h2>
+                <!-- steps & testimonial container -->
+                <div class="getting-started__content ">
+                    <!-- steps container -->
+                    <ul class="getting-started__steps" role="list">
+                        <li class="getting-started__step">
+                            <div class="step__number">
+                                <span class="step__number-text">1</span>
+                            </div>
+                            <div class="step__content">
+                                <h3 class="step__heading">Sign Up an Account</h3>
+                                <p class="step__description">Creating an account is swift and simple by completing signup here. This creates your FrameworkLearn account for one
+                                course or many.</p>
+                                <a href="#" class="btn margin-top--sm">Create Account / Login</a>
+                            </div>
+                        </li>
+                        <li class="getting-started__step">
+                            <div class="step__number">
+                                <span class="step__number-text">2</span>
+                            </div>
+                            <div class="step__content">
+                                <h3 class="step__heading">Register for a Course</h3>
+                                <p class="step__description">Select from our available FrameworkLearn courses and register.</p>
+                            </div>
+                        </li>
+                        <li class="getting-started__step">
+                            <div class="step__number">
+                                <span class="step__number-text">3</span>
+                            </div>
+                            <div class="step__content">
+                                <h3 class="step__heading">Make a Payment</h3>
+                                <p class="step__description">
+                                    Add your payment method to reserve your access. Our payment gateways are secure with no automatic billing. Got
+                                    additional questions, learn more in our FAQ below.
+                            </p>
+                            </div>
+                        </li>
+                        <li class="getting-started__step">
+                            <div class="step__number">
+                                <span class="step__number-text">4</span>
+                            </div>
+                            <div class="step__content">
+                                <h3 class="step__heading">Enjoy the Class!</h3>
+                                <p class="step__description">
+                                    Add your payment method to reserve your access. Our payment gateways are secure with no automatic billing. Got
+                                    additional questions, learn more in our FAQ below.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- testimonial container -->
+                    <aside class="getting-started__testimonial">
+                        <p class="getting-started__testimonial--header-text">
+                            what our learners <br/>
+                            are saying
+                        </p>
+                        <p class="getting-started__testimonial--main-text">
+                            "The lessons <br/>
+                            captured in this book <br />
+                            have proven to have <br />
+                            immediate <br />
+                            application for <br />
+                            practicing <br />
+                            superintendents, <br />
+                            aspiring
+                            superintendents, <br />
+                            district leaders, and <br />
+                            building level <br />
+                            leaders."
+                        </p>
+                        <p class="getting-started__testimonial--footer-text">
+                            — Jack Hoke, <br />
+                            Executive Director Of The North <br />
+                            Carolina School <br />
+                            Superintendents' Association
+                        </p>
+                    </aside>
+                </div>
+        </article>
+    </section>
+    <div class="separator--lg">&nbsp;</div>
+    
+</body>
+</html>
